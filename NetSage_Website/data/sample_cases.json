@@ -1,0 +1,59 @@
+{
+  "devices": [
+    {
+      "name": "PC1",
+      "type": "host",
+      "ip": "192.168.10.50",
+      "mask": "255.255.255.0",
+      "gateway": "192.168.10.1"
+    },
+    {
+      "name": "PC2",
+      "type": "host",
+      "ip": "192.168.10.50",
+      "mask": "255.255.255.0",
+      "gateway": "192.168.10.1"
+    },
+    {
+      "name": "PC3",
+      "type": "host",
+      "ip": "192.168.20.15",
+      "mask": "255.255.255.0",
+      "gateway": "192.168.10.1"
+    }
+  ],
+  "interfaces": [
+    {
+      "device": "SW1",
+      "interface": "Gi0/3",
+      "state": "administratively down",
+      "protocol": "down"
+    }
+  ],
+  "switches": [
+    {
+      "name": "SW1",
+      "present_vlans": [
+        10,
+        30
+      ],
+      "required_vlans": [
+        10,
+        20,
+        30
+      ]
+    }
+  ],
+  "routes": [
+    {
+      "device": "R1",
+      "destination": "192.168.30.0/24",
+      "next_hop": "10.0.0.2",
+      "reachable_next_hop": false
+    },
+    {
+      "device": "R1",
+      "destination": "192.168.40.0/24"
+    }
+  ]
+}

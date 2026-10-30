@@ -1,0 +1,6 @@
+case_id,human_decision,initial_ai_assessment,evidence_checked,human_correction,severity
+C03,Edited,AI blamed router-on-a-stick configuration.,Trunk evidence showed VLAN 20 was not allowed.,Human retained evidence-based diagnosis: VLAN 20 missing from allowed trunk list.,High
+C07,Edited,AI described the issue as a gateway mismatch.,IP 192.168.30.20 with /25 makes gateway 192.168.30.1 outside the host subnet.,Human changed diagnosis to wrong subnet mask.,High
+C13,Edited,AI recommended creating a new static route.,The route already existed; the configured next hop was unreachable.,Human changed diagnosis to incorrect next-hop address.,High
+C18,Rejected,AI suspected the PC DNS setting.,PC could reach the DNS server and the server lacked the required hostname record.,Human rejected the initial diagnosis and identified the missing DNS A record.,Medium
+C22,Edited,AI suggested adding another static NAT entry.,Multiple inside clients require PAT/overload rather than one-to-one static mappings.,Human changed recommendation to PAT/overload.,Medium
